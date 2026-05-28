@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAEEM AND BROTHERS (M) SDN BHD | Excellence in Motion</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --petronas-teal: #00A19D;
+            --navy-deep: #001A33;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* NAVIGATION STYLE */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(0, 161, 157, 0.1);
+        }
+
+        /* HERO SECTION DENGAN GAMBAR ANDA */
+        .hero-section {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* GAMBAR ANDA DI SINI */
+            background-image: linear-gradient(to right, rgba(0, 26, 51, 0.85), rgba(0, 161, 157, 0.4)), url('image/pic.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Effect Parallax */
+        }
+
+        /* TEXT GRADIENT GAYA PREMIUM */
+        .premium-text {
+            background: linear-gradient(135deg, #ffffff 30%, #00C8C3 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* KAD FORMAL */
+        .info-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .info-card:hover {
+            transform: translateY(-12px);
+            border-color: var(--petronas-teal);
+            box-shadow: 0 25px 50px -12px rgba(0, 161, 157, 0.25);
+        }
+
+        /* ANIMASI */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .reveal {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+    </style>
+</head>
+
+<body class="bg-white text-slate-800">
+
+    <nav class="fixed w-full z-50 glass-nav py-4 px-6 lg:px-20">
+        <div class="flex justify-between items-center max-w-7xl mx-auto">
+            <div class="text-2xl font-extrabold tracking-tighter text-navy-deep">
+                NAEEM <span class="text-[--petronas-teal]">&</span> BROTHERS
+            </div>
+
+            <div class="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-widest items-center">
+                <a href="index.html" class="text-[--petronas-teal] border-b-2 border-[--petronas-teal] pb-1">Home</a>
+                <a href="about.html" class="hover:text-[--petronas-teal] transition-colors">About</a>
+                <a href="services.html" class="hover:text-[--petronas-teal] transition-colors">Services</a>
+                <a href="contact.html" class="bg-[--petronas-teal] text-white px-6 py-2 rounded-full hover:bg-teal-700 transition-all shadow-lg">Contact Us</a>
+            </div>
+            
+            <button id="mobile-btn" class="md:hidden text-2xl text-navy-deep"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <section class="hero-section text-white px-6">
+        <div class="max-w-5xl relative z-10 text-center md:text-left">
+            <div class="reveal inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full mb-6">
+                <span class="w-2 h-2 bg-[--petronas-teal] rounded-full animate-pulse"></span>
+                <span class="text-xs font-bold uppercase tracking-[0.2em]">Excellence in Motion</span>
+            </div>
+
+            <h1 class="reveal delay-1 text-5xl md:text-8xl font-extrabold leading-none mb-6">
+                NAEEM AND <br>
+                <span class="premium-text">BROTHERS</span>
+            </h1>
+
+            <p class="reveal delay-2 text-lg md:text-xl text-slate-200 mb-10 max-w-2xl leading-relaxed">
+                Pioneering the future of industrial recovery and global commerce. We turn heavy metal into sustainable resources with precision and integrity.
+            </p>
+
+            <div class="reveal delay-2 flex flex-col sm:flex-row gap-4">
+                <a href="services.html" class="bg-[--petronas-teal] text-white px-10 py-4 rounded-xl font-bold text-center hover:scale-105 transition-transform shadow-2xl">
+                    Our Expertise
+                </a>
+                <a href="about.html" class="bg-white/10 backdrop-blur-md border border-white/30 text-white px-10 py-4 rounded-xl font-bold text-center hover:bg-white hover:text-navy-deep transition-all">
+                    Learn More
+                </a>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white to-transparent"></div>
+    </section>
+
+    <section class="py-24 px-6 lg:px-20 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 -mt-32 relative z-20">
+                <div class="info-card p-10 rounded-2xl shadow-xl">
+                    <div class="w-14 h-14 bg-teal-50 text-[--petronas-teal] rounded-lg flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-navy-deep mb-3">Industrial Mastery</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Advanced manufacturing and machinery repair services tailored for high-scale industrial operations.</p>
+                </div>
+
+                <div class="info-card p-10 rounded-2xl shadow-xl">
+                    <div class="w-14 h-14 bg-teal-50 text-[--petronas-teal] rounded-lg flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-navy-deep mb-3">Global Logistics</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Seamless import/export solutions connecting Malaysian resources to the heart of global markets.</p>
+                </div>
+
+                <div class="info-card p-10 rounded-2xl shadow-xl">
+                    <div class="w-14 h-14 bg-teal-50 text-[--petronas-teal] rounded-lg flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-navy-deep mb-3">Unwavering Integrity</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">A certified Bumiputera-status company built on trust, quality, and professional mercantile agency.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-navy-deep py-20 text-white overflow-hidden relative">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-[--petronas-teal] opacity-10 blur-[100px] rounded-full"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center relative z-10">
+            <div>
+                <div class="text-5xl font-black text-[--petronas-teal] mb-2">15+</div>
+                <div class="text-xs uppercase tracking-widest font-bold text-slate-400">Years of Growth</div>
+            </div>
+            <div>
+                <div class="text-5xl font-black text-[--petronas-teal] mb-2">200+</div>
+                <div class="text-xs uppercase tracking-widest font-bold text-slate-400">Successful Projects</div>
+            </div>
+            <div>
+                <div class="text-5xl font-black text-[--petronas-teal] mb-2">6</div>
+                <div class="text-xs uppercase tracking-widest font-bold text-slate-400">Global Markets</div>
+            </div>
+            <div>
+                <div class="text-5xl font-black text-[--petronas-teal] mb-2">100%</div>
+                <div class="text-xs uppercase tracking-widest font-bold text-slate-400">Client Trust</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white py-12 px-6 border-t border-slate-100 text-center">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-xl font-extrabold text-navy-deep mb-6">
+                NAEEM <span class="text-[--petronas-teal]">&</span> BROTHERS
+            </div>
+            <p class="text-slate-400 text-xs tracking-widest uppercase">
+                &copy; 2026 Naeem and Brothers (M) Sdn Bhd. Engineered for Excellence.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple Mobile Menu Toggle
+        const btn = document.getElementById('mobile-btn');
+        btn.addEventListener('click', () => {
+            alert('Mobile Menu Coming Soon! Please use desktop view for full experience.');
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | NAEEM AND BROTHERS (M) SDN BHD</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --petronas-teal: #00A19D;
+            --navy-deep: #001A33;
+            --navy-darker: #000F20;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f8fafc;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(0, 161, 157, 0.1);
+        }
+
+        /* Hero Abstract Background */
+        .hero-pattern {
+            background-color: var(--navy-deep);
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(0, 161, 157, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 30%, rgba(0, 161, 157, 0.1) 0%, transparent 50%);
+        }
+
+        /* Service Cards */
+        .service-card {
+            background: white;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px -10px rgba(0, 161, 157, 0.3);
+            border-color: var(--petronas-teal);
+        }
+
+        /* Image Placeholder Template */
+        .img-placeholder {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #f1f5f9 0%, #cbd5e1 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            transition: transform 0.7s ease;
+        }
+
+        .img-wrapper {
+            overflow: hidden; 
+            position: relative;
+        }
+
+        .service-card:hover .img-placeholder {
+            transform: scale(1.08);
+        }
+
+        /* Premium Glass Card */
+        .premium-glass-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-left: 4px solid var(--petronas-teal);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Animated Gradient Text */
+        .text-gradient-teal {
+            background: linear-gradient(90deg, #00A19D, #4fd1c5, #00A19D);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientMove 3s linear infinite;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
+
+        /* Scroll Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="text-slate-800">
+
+    <nav class="fixed w-full z-50 glass-nav py-3 px-6 lg:px-20">
+        <div class="flex justify-between items-center max-w-7xl mx-auto">
+            <a href="index.html" class="flex items-center">
+                <img src="image/logo.png.jpeg" alt="NAEEM & BROTHERS Logo" class="h-12 w-auto object-contain drop-shadow-md">
+            </a>
+
+            <div class="hidden md:flex space-x-10 text-sm font-bold uppercase tracking-widest items-center text-navy-deep">
+                <a href="index.html" class="hover:text-[--petronas-teal] transition-colors">Home</a>
+                <a href="about.html" class="hover:text-[--petronas-teal] transition-colors">About</a>
+                <a href="services.html" class="text-[--petronas-teal] border-b-2 border-[--petronas-teal] pb-1">Services</a>
+                <a href="contact.html" class="bg-[--petronas-teal] text-white px-7 py-2.5 rounded-full hover:bg-teal-700 transition-all shadow-lg">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-pattern pt-48 pb-32 px-6 text-center relative">
+        <div class="max-w-4xl mx-auto reveal relative z-10">
+            <span class="inline-block py-1 px-5 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-400 text-xs font-bold tracking-widest uppercase mb-6 shadow-[0_0_15px_rgba(0,161,157,0.3)]">
+                Our Capabilities
+            </span>
+            <h1 class="text-5xl md:text-7xl font-black text-white leading-tight mb-6">
+                Our Core <span class="text-gradient-teal">Expertise</span>
+            </h1>
+            <p class="text-slate-300 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+                Comprehensive industrial procurement, expert reconditioning, and seamless global logistics solutions all under one roof.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 lg:px-20 max-w-7xl mx-auto relative">
+        <div class="text-center mb-16 reveal">
+            <h2 class="text-4xl font-extrabold text-navy-deep mb-4">Strategic Procurement</h2>
+            <p class="text-slate-500 font-medium">We source and purchase high-grade industrial assets globally.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="service-card reveal group">
+                <div class="img-wrapper bg-slate-100">
+                    <img src="image/heavymachine.png.jpeg" alt="Heavy Machineries" class="w-full h-[250px] object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+                <div class="p-8">
+                    <div class="w-12 h-1.5 bg-[--petronas-teal] rounded-full mb-6"></div>
+                    <h3 class="text-2xl font-bold text-navy-deep mb-3">Heavy Machineries</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Acquisition of top-tier used heavy machineries including cranes, bulldozers, shovel loaders, and forklifts. We ensure every asset has high recovery potential.
+                    </p>
+                </div>
+            </div>
+
+            <div class="service-card reveal group" style="transition-delay: 150ms;">
+                <div class="img-wrapper bg-slate-100">
+                    <img src="image/motor.png.jpeg" alt="Motorised Equipment" class="w-full h-[250px] object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+                <div class="p-8">
+                    <div class="w-12 h-1.5 bg-[--petronas-teal] rounded-full mb-6"></div>
+                    <h3 class="text-2xl font-bold text-navy-deep mb-3">Motorised Equipment</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Sourcing industrial-grade motorised and electrical equipment such as air compressors, generator sets, dynamos, hand drills, and electric cutters.
+                    </p>
+                </div>
+            </div>
+
+            <div class="service-card reveal group" style="transition-delay: 300ms;">
+                <div class="img-wrapper bg-slate-100">
+                    <img src="image/electical.png.jpeg" alt="Electronics & Electrical" class="w-full h-[250px] object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+                <div class="p-8">
+                    <div class="w-12 h-1.5 bg-[--petronas-teal] rounded-full mb-6"></div>
+                    <h3 class="text-2xl font-bold text-navy-deep mb-3">Electronics & Electrical</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Specialized trading and initial refurbishing of used electronics and commercial electrical items for both local and international markets.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 bg-navy-darker relative overflow-hidden px-6 lg:px-20">
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-teal-600/20 blur-[150px] rounded-full pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-600/20 blur-[150px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
+            
+            <div class="reveal premium-glass-card p-10 md:p-12 rounded-3xl relative">
+                <i class="fas fa-cogs absolute right-[-20px] bottom-[-20px] text-[150px] text-white/5 rotate-12"></i>
+
+                <h3 class="text-teal-400 font-extrabold uppercase tracking-widest text-xs mb-4">Global Network Operations</h3>
+                <h2 class="text-4xl md:text-5xl font-black text-white mb-8 leading-tight">
+                    Complete <br>
+                    <span class="text-gradient-teal">Re-conditioning</span> Process
+                </h2>
+                
+                <p class="text-slate-100 text-lg leading-relaxed mb-6 font-light">
+                    We bring industrial assets back to their original operating functions. To maximize cost-efficiency and quality, the major reconditioning, refurbishing, and repairing processes are expertly handled by our Sister Company in <strong class="text-teal-300 font-bold">Pakistan</strong>.
+                </p>
+                <p class="text-slate-100 text-lg leading-relaxed mb-10 font-light">
+                    This strategic partnership allows us to leverage highly skilled manpower and optimized resources, delivering unmatched value to our clients.
+                </p>
+                
+                <div class="bg-white/10 p-6 rounded-2xl border border-white/20 flex items-start space-x-5 hover:bg-white/15 transition duration-300">
+                    <div class="bg-teal-500 w-12 h-12 flex items-center justify-center rounded-full flex-shrink-0 shadow-[0_0_15px_rgba(0,161,157,0.5)]">
+                        <i class="fas fa-store text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold text-lg mb-1">Local Sales Division</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            We also supply partly reconditioned items directly to the local market, ensuring fast and reliable access to functional assets.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal" style="transition-delay: 200ms;">
+                <div class="img-wrapper rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-teal-500/30 overflow-hidden relative group">
+                    <div class="absolute inset-0 bg-teal-900/20 group-hover:bg-transparent transition duration-500 z-10"></div>
+                    
+                    <div class="img-placeholder h-[500px] bg-[#0f172a] text-slate-500 transition-transform duration-700 group-hover:scale-105">
+                        <i class="fas fa-globe-asia text-7xl mb-6 text-teal-500/50"></i>
+                        <span class="text-xl font-bold text-white tracking-wide">Image Area: Reconditioning Facility</span>
+                        <span class="text-sm mt-2 text-slate-400">Sister Company / Pakistan Operations</span>
+                        <span class="text-xs text-slate-500 mt-1">(Suggested: 1000x1000px)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 lg:px-20 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center flex-col-reverse lg:flex-row">
+            
+            <div class="reveal order-2 lg:order-1 relative group">
+                <div class="absolute -inset-4 bg-teal-50 rounded-3xl z-0 transform rotate-3 group-hover:rotate-6 transition duration-500"></div>
+                
+                <div class="img-wrapper rounded-3xl shadow-2xl overflow-hidden relative z-10 border border-slate-100 bg-white">
+                    <div class="img-placeholder h-[450px] bg-slate-50 text-slate-400 transition-transform duration-700 group-hover:scale-105">
+                        <i class="fas fa-shipping-fast text-7xl mb-6 text-slate-300 group-hover:text-[--petronas-teal] transition-colors duration-500"></i>
+                        <span class="text-xl font-bold text-navy-deep">Image Area: Logistics & Storage</span>
+                        <span class="text-sm mt-2">Export Facilities / Containers</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal order-1 lg:order-2">
+                <div class="w-16 h-2 bg-gradient-to-r from-[--petronas-teal] to-blue-500 rounded-full mb-6"></div>
+                <h2 class="text-4xl md:text-5xl font-black text-navy-deep mb-6 leading-tight">Logistics & <br>Export Handling</h2>
+                <p class="text-slate-600 text-lg leading-relaxed mb-10">
+                    More than just trading, we operate as a fully equipped collection centre. We provide comprehensive storage facilities for our existing and new clients to streamline their operations.
+                </p>
+                
+                <div class="space-y-8">
+                    <div class="flex items-start p-6 bg-slate-50 rounded-2xl hover:bg-teal-50 transition duration-300 border border-transparent hover:border-teal-100">
+                        <div class="w-14 h-14 bg-white shadow-md rounded-xl flex items-center justify-center text-[--petronas-teal] flex-shrink-0 mr-5">
+                            <i class="fas fa-warehouse text-2xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-navy-deep text-xl mb-2">Third-Party Receiving</h4>
+                            <p class="text-sm text-slate-600 leading-relaxed">If we cannot source specific merchandise, clients can purchase from other suppliers and securely send the goods directly to our storage facility.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start p-6 bg-slate-50 rounded-2xl hover:bg-teal-50 transition duration-300 border border-transparent hover:border-teal-100">
+                        <div class="w-14 h-14 bg-white shadow-md rounded-xl flex items-center justify-center text-[--petronas-teal] flex-shrink-0 mr-5">
+                            <i class="fas fa-box-open text-2xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-navy-deep text-xl mb-2">Container Loading & Export</h4>
+                            <p class="text-sm text-slate-600 leading-relaxed">We handle all the heavy lifting. Our expert team makes all necessary arrangements for professional container loading, stuffing, and global export logistics.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-navy-darker py-16 px-6 text-center text-white border-t border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-col items-center">
+            <img src="image/logo.png.jpeg" alt="NAEEM & BROTHERS Logo" class="h-16 w-auto mb-6 opacity-90 hover:opacity-100 transition-opacity">
+            
+            <p class="text-slate-500 text-xs tracking-widest uppercase mb-8 font-semibold">
+                &copy; 2026 Naeem and Brothers (M) Sdn Bhd. All Rights Reserved.
+            </p>
+            <div class="flex justify-center space-x-6 text-slate-400">
+                <a href="#" class="hover:text-teal-400 transition-colors"><i class="fab fa-facebook text-xl"></i></a>
+                <a href="#" class="hover:text-teal-400 transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
+                <a href="#" class="hover:text-teal-400 transition-colors"><i class="fas fa-envelope text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const reveals = document.querySelectorAll('.reveal');
+
+            const revealOnScroll = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1, 
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            reveals.forEach(reveal => {
+                revealOnScroll.observe(reveal);
+            });
+        });
+    </script>
+
+</body>
+</html>

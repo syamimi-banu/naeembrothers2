@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | NAEEM AND BROTHERS (M) SDN BHD</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --petronas-teal: #00A19D;
+            --navy-deep: #001A33;
+            --navy-darker: #000F20;
+            --light-bg: #f8fafc;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--light-bg);
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(0, 161, 157, 0.1);
+        }
+
+        /* Hero Abstract Background */
+        .hero-pattern {
+            background-color: var(--navy-deep);
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(0, 161, 157, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(0, 161, 157, 0.1) 0%, transparent 50%);
+        }
+
+        /* Animated Gradient Text */
+        .text-gradient-teal {
+            background: linear-gradient(90deg, #00A19D, #4fd1c5, #00A19D);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientMove 3s linear infinite;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
+
+        /* Modern Contact Cards */
+        .contact-card {
+            background: white;
+            border-radius: 1.5rem;
+            border: 1px solid #e2e8f0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .contact-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--petronas-teal);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+            z-index: -1;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -10px rgba(0, 161, 157, 0.15);
+            border-color: rgba(0, 161, 157, 0.3);
+        }
+
+        .contact-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        /* Glassmorphism Form Container */
+        .form-glass {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Custom Input Fields */
+        .custom-input {
+            width: 100%;
+            background: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.75rem;
+            padding: 1rem 1.25rem;
+            color: #1e293b;
+            transition: all 0.3s ease;
+        }
+
+        .custom-input:focus {
+            outline: none;
+            background: white;
+            border-color: var(--petronas-teal);
+            box-shadow: 0 0 0 4px rgba(0, 161, 157, 0.1);
+        }
+
+        /* Scroll Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav py-3 px-6 lg:px-20">
+        <div class="flex justify-between items-center max-w-7xl mx-auto">
+            <a href="index.html" class="flex items-center">
+                <img src="image/logo.png.jpeg" alt="NAEEM & BROTHERS Logo" class="h-12 w-auto object-contain drop-shadow-md">
+            </a>
+
+            <div class="hidden md:flex space-x-10 text-sm font-bold uppercase tracking-widest items-center text-navy-deep">
+                <a href="index.html" class="hover:text-[--petronas-teal] transition-colors">Home</a>
+                <a href="about.html" class="hover:text-[--petronas-teal] transition-colors">About</a>
+                <a href="services.html" class="hover:text-[--petronas-teal] transition-colors">Services</a>
+                <a href="contact.html" class="text-[--petronas-teal] border-b-2 border-[--petronas-teal] pb-1">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="hero-pattern pt-48 pb-32 px-6 text-center relative">
+        <div class="max-w-4xl mx-auto reveal relative z-10">
+            <span class="inline-block py-1 px-5 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-400 text-xs font-bold tracking-widest uppercase mb-6 shadow-[0_0_15px_rgba(0,161,157,0.3)]">
+                Connect With Us
+            </span>
+            <h1 class="text-5xl md:text-7xl font-black text-white leading-tight mb-6">
+                Get  <span class="text-gradient-teal">In Touch</span>
+            </h1>
+            <p class="text-slate-300 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto font-light">
+                Whether you're looking for procurement solutions, reconditioning services, or have a general inquiry, our team is ready to assist you globally.
+            </p>
+        </div>
+        
+        <!-- Decorative bottom wave/curve -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+            <svg class="relative block w-full h-[50px] md:h-[100px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,123.63,192.27,112,236.43,103.57,280.61,81.48,321.39,56.44Z" fill="#f8fafc"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Main Contact Section -->
+    <section class="py-16 px-6 lg:px-20 max-w-7xl mx-auto -mt-20 relative z-20">
+        <div class="grid lg:grid-cols-12 gap-12 items-start">
+            
+            <!-- Left Column: Contact Information -->
+            <div class="lg:col-span-5 space-y-6">
+                
+                <!-- Person in Charge Card -->
+                <div class="contact-card p-8 reveal">
+                    <div class="w-14 h-14 bg-teal-50 rounded-2xl flex items-center justify-center mb-6 border border-teal-100">
+                        <i class="fas fa-user-tie text-2xl text-[--petronas-teal]"></i>
+                    </div>
+                    <h4 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-2">Direct Contact Person</h4>
+                    <h3 class="text-2xl font-extrabold text-navy-deep mb-4">Syafi Amirul bin Saifel Amer</h3>
+                    
+                    <div class="space-y-4 mt-6">
+                        <a href="tel:0126848895" class="flex items-center group">
+                            <div class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center mr-4 group-hover:bg-[--petronas-teal] group-hover:text-white transition-colors">
+                                <i class="fas fa-phone-alt text-slate-400 group-hover:text-white"></i>
+                            </div>
+                            <span class="text-slate-600 font-medium group-hover:text-[--petronas-teal] transition-colors">+60 12-684 8895</span>
+                        </a>
+                        
+                        <a href="mailto:syafiamirul@yahoo.com" class="flex items-center group">
+                            <div class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center mr-4 group-hover:bg-[--petronas-teal] group-hover:text-white transition-colors">
+                                <i class="fas fa-envelope text-slate-400 group-hover:text-white"></i>
+                            </div>
+                            <span class="text-slate-600 font-medium group-hover:text-[--petronas-teal] transition-colors">syafiamirul@yahoo.com</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Office Headquarters Card -->
+                <div class="contact-card p-8 reveal" style="transition-delay: 150ms;">
+                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 border border-blue-100">
+                        <i class="fas fa-building text-2xl text-blue-500"></i>
+                    </div>
+                    <h4 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-2">Headquarters</h4>
+                    <h3 class="text-xl font-bold text-navy-deep mb-3">Naeem & Brothers (M) Sdn Bhd</h3>
+                    <p class="text-slate-500 leading-relaxed text-sm">
+                        Lot 123, Kawasan Perindustrian Utama,<br>
+                        Jalan Korporat 1, 40000 Shah Alam,<br>
+                        Selangor Darul Ehsan, Malaysia.
+                        <br><span class="text-xs text-slate-400 mt-2 inline-block">*(Update to actual address)*</span>
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Right Column: Interactive Form -->
+            <div class="lg:col-span-7 reveal" style="transition-delay: 300ms;">
+                <div class="form-glass p-8 md:p-12 rounded-3xl">
+                    <h3 class="text-3xl font-black text-navy-deep mb-2">Send us a message</h3>
+                    <p class="text-slate-500 mb-10 font-medium">We will respond to your inquiry within 24 business hours.</p>
+
+                    <form action="#" method="POST" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <!-- Full Name -->
+                            <div class="space-y-2">
+                                <label class="text-sm font-bold text-slate-700 ml-1">Full Name</label>
+                                <input type="text" placeholder="John Doe" class="custom-input">
+                            </div>
+                            <!-- Company -->
+                            <div class="space-y-2">
+                                <label class="text-sm font-bold text-slate-700 ml-1">Company Name</label>
+                                <input type="text" placeholder="Your Organization" class="custom-input">
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <!-- Email -->
+                            <div class="space-y-2">
+                                <label class="text-sm font-bold text-slate-700 ml-1">Email Address</label>
+                                <input type="email" placeholder="john@example.com" class="custom-input">
+                            </div>
+                            <!-- Phone -->
+                            <div class="space-y-2">
+                                <label class="text-sm font-bold text-slate-700 ml-1">Phone Number</label>
+                                <input type="tel" placeholder="+60 12-345 6789" class="custom-input">
+                            </div>
+                        </div>
+
+                        <!-- Subject -->
+                        <div class="space-y-2">
+                            <label class="text-sm font-bold text-slate-700 ml-1">Inquiry Type</label>
+                            <select class="custom-input appearance-none cursor-pointer">
+                                <option>General Inquiry</option>
+                                <option>Procurement Services</option>
+                                <option>Reconditioning & Repair</option>
+                                <option>Logistics & Storage</option>
+                            </select>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="space-y-2">
+                            <label class="text-sm font-bold text-slate-700 ml-1">Your Message</label>
+                            <textarea rows="4" placeholder="How can we help you today?" class="custom-input resize-none"></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="button" class="w-full bg-navy-deep text-white font-bold text-lg py-4 rounded-xl hover:bg-[--petronas-teal] transition-all duration-300 shadow-[0_10px_20px_rgba(0,0,0,0.1)] hover:shadow-[0_15px_30px_rgba(0,161,157,0.3)] transform hover:-translate-y-1 flex justify-center items-center group">
+                            <span>Submit Inquiry</span>
+                            <i class="fas fa-paper-plane ml-3 opacity-70 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-16 reveal">
+        <div class="max-w-7xl mx-auto px-6 lg:px-20">
+            <div class="w-full h-[400px] bg-slate-200 rounded-3xl overflow-hidden shadow-lg border border-slate-300 relative group">
+                <!-- Placeholder for actual Google Maps iframe -->
+                <div class="absolute inset-0 bg-slate-800/5 z-10 pointer-events-none group-hover:bg-transparent transition-colors"></div>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127482.6844962295!2d101.44299945115296!3d3.073289066601445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4d8b4dc5060b%3A0x6a0a030733ba058f!2sShah%20Alam%2C%20Selangor!5e0!3m2!1sen!2smy!4v1714000000000!5m2!1sen!2smy" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="filter grayscale-[30%] contrast-125">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-darker py-16 px-6 text-center text-white border-t border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-col items-center">
+            <img src="image/logo.png.jpeg" alt="NAEEM & BROTHERS Logo" class="h-16 w-auto mb-6 opacity-90 hover:opacity-100 transition-opacity">
+            
+            <p class="text-slate-500 text-xs tracking-widest uppercase mb-8 font-semibold">
+                &copy; 2026 Naeem and Brothers (M) Sdn Bhd. All Rights Reserved.
+            </p>
+            <div class="flex justify-center space-x-6 text-slate-400">
+                <a href="#" class="hover:text-teal-400 transition-colors"><i class="fab fa-facebook text-xl"></i></a>
+                <a href="#" class="hover:text-teal-400 transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
+                <a href="mailto:syafiamirul@yahoo.com" class="hover:text-teal-400 transition-colors"><i class="fas fa-envelope text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll Animation Script
+        document.addEventListener('DOMContentLoaded', function() {
+            const reveals = document.querySelectorAll('.reveal');
+
+            const revealOnScroll = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1, 
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            reveals.forEach(reveal => {
+                revealOnScroll.observe(reveal);
+            });
+        });
+    </script>
+
+</body>
+</html>
